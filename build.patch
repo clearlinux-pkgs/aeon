@@ -1,0 +1,21 @@
+--- aeon-0.2.7/env.sh~	2017-03-03 00:24:39.000000000 +0000
++++ aeon-0.2.7/env.sh	2017-11-29 04:01:57.241568321 +0000
+@@ -58,7 +58,7 @@
+ export SRCS="$(echo ${SRCS} | sed 's/\n//g')"
+ 
+ export CFLAGS="-Wno-deprecated-declarations -std=c++11"
+-export CC="clang++"
++export CC="g++"
+ 
+ pkg-config --exists opencv
+ if [[ $? == 0 ]]; then
+--- aeon-0.2.7/loader/src/block_loader_nds.cpp~	2017-03-03 00:24:39.000000000 +0000
++++ aeon-0.2.7/loader/src/block_loader_nds.cpp	2017-11-29 04:06:41.970142870 +0000
+@@ -18,7 +18,6 @@
+ // apt-get install libcurl4-openssl-dev
+ #include <curl/curl.h>
+ #include <curl/easy.h>
+-#include <curl/curlbuild.h>
+ 
+ #include "json.hpp"
+ #include "block_loader_nds.hpp"

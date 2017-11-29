@@ -1,0 +1,9 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+llvm
+curl-dev
+numpy
+opencv-dev
+sox-dev
+curl-dev
+openssl-dev

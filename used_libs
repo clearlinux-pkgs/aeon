@@ -1,0 +1,12 @@
+libc.so.6
+libcurl.so.4
+libgcc_s.so.1
+libm.so.6
+libopencv_core.so.3.3
+libopencv_imgcodecs.so.3.3
+libopencv_imgproc.so.3.3
+libpthread.so.0
+libpython2.7.so.1.0
+libpython3.6m.so.1.0
+libsox.so.3
+libstdc++.so.6
