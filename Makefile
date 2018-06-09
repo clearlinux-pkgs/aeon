@@ -1,5 +1,5 @@
 PKG_NAME := aeon
-URL = https://github.com/NervanaSystems/aeon/archive/v0.2.7.tar.gz
+URL = 
 ARCHIVES = 
 
 include ../common/Makefile.common

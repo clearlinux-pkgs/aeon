@@ -4,7 +4,7 @@
 #
 Name     : aeon
 Version  : 0.2.7
-Release  : 7
+Release  : 8
 URL      : https://github.com/NervanaSystems/aeon/archive/v0.2.7.tar.gz
 Source0  : https://github.com/NervanaSystems/aeon/archive/v0.2.7.tar.gz
 Summary  : No detailed summary available
@@ -13,8 +13,6 @@ License  : Apache-2.0
 Requires: aeon-python3
 Requires: aeon-python
 Requires: numpy
-Requires: pytest
-Requires: pytest-cov
 BuildRequires : curl-dev
 BuildRequires : llvm
 BuildRequires : numpy
@@ -62,7 +60,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1525364396
+export SOURCE_DATE_EPOCH=1528566761
 python3 setup.py build -b py3
 
 %install
