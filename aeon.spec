@@ -4,13 +4,14 @@
 #
 Name     : aeon
 Version  : 0.2.7
-Release  : 8
+Release  : 9
 URL      : https://github.com/NervanaSystems/aeon/archive/v0.2.7.tar.gz
 Source0  : https://github.com/NervanaSystems/aeon/archive/v0.2.7.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: aeon-python3
+Requires: aeon-license
 Requires: aeon-python
 Requires: numpy
 BuildRequires : curl-dev
@@ -20,7 +21,6 @@ BuildRequires : opencv-dev
 BuildRequires : openssl-dev
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : sox-dev
@@ -32,6 +32,14 @@ Patch1: build.patch
 First grab aeon's dependencies:
 ### Ubuntu:
 sudo apt-get install libcurl4-openssl-dev clang libopencv-dev libsox-dev
+
+%package license
+Summary: license components for the aeon package.
+Group: Default
+
+%description license
+license components for the aeon package.
+
 
 %package python
 Summary: python components for the aeon package.
@@ -60,11 +68,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528566761
+export SOURCE_DATE_EPOCH=1529090199
 python3 setup.py build -b py3
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/aeon
+cp LICENSE %{buildroot}/usr/share/doc/aeon/LICENSE
 python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -72,6 +82,10 @@ echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/aeon/LICENSE
 
 %files python
 %defattr(-,root,root,-)
