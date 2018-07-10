@@ -4,7 +4,7 @@
 #
 Name     : aeon
 Version  : 0.2.7
-Release  : 17
+Release  : 18
 URL      : https://github.com/NervanaSystems/aeon/archive/v0.2.7.tar.gz
 Source0  : https://github.com/NervanaSystems/aeon/archive/v0.2.7.tar.gz
 Summary  : No detailed summary available
